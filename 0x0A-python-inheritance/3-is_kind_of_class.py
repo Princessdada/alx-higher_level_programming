@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-"""is_same_class
+"""is_kind_of_class
 """
 
 
-def is_same_class(obj, a_class):
-    """Returns True if obj is same instance, else False
+def is_kind_of_class(obj, a_class):
+    """Function that returns True if obj isinstance of,
+    or if the object is an instance of a class that inherited
+    from, the specified class; otherwise False
     """
 
-    if type(obj) is a_class:
+    if isinstance(obj, a_class):
         return True
     else:
         return False
