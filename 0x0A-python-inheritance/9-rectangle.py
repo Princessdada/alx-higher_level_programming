@@ -1,27 +1,17 @@
 #!/usr/bin/python3
-"""Rectangle inherits from BaseGeometry
+""" defines a class Student
 """
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-
-class Rectangle(BaseGeometry):
-    """Rectangle data inherits from BaseGeometry
+class Student:
+    """ create class Student with instance
     """
 
-    def __init__(self, width, height):
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+    def __init__(self, first_name, last_name, age):
+        """ initializing class """
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-    def area(self):
-        """Method that calculates area of rectangle
-        """
-
-        return self.__width * self.__height
-
-    def __str__(self):
-                                                                                        """Magic method to return rectangle description
-                                                                                        """
-
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+    def to_json(self):
+        """ method to return directory description"""
+        return self.__dict__.copy()
